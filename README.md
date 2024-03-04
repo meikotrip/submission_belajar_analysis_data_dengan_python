@@ -2,8 +2,8 @@
 
 ## Setup environment
 ```
-conda create --name main-ds python=3.9
-conda activate main-ds
+pipenv install
+pipenv shell
 pip install numpy pandas scipy matplotlib seaborn jupyter streamlit babel
 ```
 
