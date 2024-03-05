@@ -19,7 +19,7 @@ def create_count_rental_df(main_df):
 
 # Membaca file csv  main_df
 hour_day_df = pd.read_csv("dashboard/main_data_bike_sharing.csv")
-# hour_day_df = pd.read_csv("main_data_bike_sharing.csv")
+# hour_day_df = pd.read_csv("main_data_bike_sharing.csv") untuk lokal streamlit
 
 # Menginisiasi min_date dan max_date
 hour_day_df["dteday"] = pd.to_datetime(hour_day_df["dteday"]).dt.date
@@ -29,7 +29,7 @@ max_date = hour_day_df["dteday"].max()
 with st.sidebar:
     # Menambahkan logo perusahaan
     st.image("dashboard/company-logo.png")
-    # st.image("company-logo.png")
+    # st.image("company-logo.png") untuk local streamlit
     
     # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
