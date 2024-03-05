@@ -18,7 +18,8 @@ def create_count_rental_df(main_df):
     return main_df[['hr', 'registered', 'casual', 'cnt']]
 
 # Membaca file csv  main_df
-hour_day_df = pd.read_csv("main_data_bike_sharing.csv")
+hour_day_df = pd.read_csv("dashboard/main_data_bike_sharing.csv")
+# hour_day_df = pd.read_csv("main_data_bike_sharing.csv")
 
 # Menginisiasi min_date dan max_date
 hour_day_df["dteday"] = pd.to_datetime(hour_day_df["dteday"]).dt.date
